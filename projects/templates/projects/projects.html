@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<article class="container content-section col-lg-8">
+  <div class="container search-bar">
+    <form method="get">
+      <input type="text" class="form-control rounded-0" name="q" id="id_q" placeholder="Search...">
+    </form>
+  </div>
+  <hr class="pb-2"></hr>
+
+{% if programs %}
+
+    <div class="row">
+    {% for p in programs %}
+      <div class="container content-section border-0 col-md-6 shadowed hvrbox stdize-hvrbox rounded-0">
+          <strong class="project-responsive-header">{{ p.title }}</strong>
+          <hr></hr>
+          {% for t in p.tags_as_list %}
+            <span class="badge badge-pill badge-secondary text-hvrbox project-responsive-span">{{ t }}</span>
+          {% endfor %}
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <button type="button" class="btn btn-info border-0 rounded-0 text-white" onclick="window.location.href='{% url 'toProgramDetail' p.id %}';">Details</button>
+            </div>
+          </div>
+      </div>
+    {% endfor %}
+    </div>
+  </article>
+{% else %}
+  <article class="container content-section col-md-8 padit">
+    <h1>No Results...</h1>
+  </article>
+{% endif %}
+
+
+
+<script type="text/javascript">
+  document.getElementById("id_q").value = {{query}}
+</script>
+
+{% endblock %}

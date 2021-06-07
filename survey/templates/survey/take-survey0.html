@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="container content-section col-md-8">
+    <div class="row">
+      <h2 class="col-md-8">{{ survey.title }}</h2>
+      <p class="text-right col-md-2">Disagree</p>
+      <p class="text-right col-md-2">Agree</p>
+    </div>
+  </article>
+
+  <article class="container content-section col-md-8">
+  <form method="POST">
+  {% csrf_token %}
+  {% for a in answers %}
+    <div class="container">
+      <h1>Grid Example</h1>
+      <p>This example demonstrates a 50%/50% split on small, medium, large and xlarge devices. On extra small devices, it will stack (100% width).</p>
+      <p>Resize the browser window to see the effect.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 bg-success">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div class="col-sm-6 bg-warning">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+          </div>
+        </div>
+      </div>
+    </div>
+  <hr></hr>
+  {% endfor %}
+  <div class="container text-center">
+    <button class="btn btn-info "type="submit">Finish</button>
+  </div>
+  </form>
+
+
+  </article>
+{% endblock content %}
+
+{% extends "base.html" %}
+{% block content %}
+  <article class="container content-section col-md-8">
+    <div class="row">
+      <h2 class="col-md-8">{{ survey.title }}</h2>
+      <p class="text-right col-md-2">Disagree</p>
+      <p class="text-right col-md-2">Agree</p>
+    </div>
+  </article>
+
+  <article class="container content-section col-md-8">
+  <form method="POST">
+  {% csrf_token %}
+  {% for q in questions %}
+      <div class="row">
+        <div class="surveyQ col-md-8"><strong>{{ q.qNumber }})</strong> {{ q.question }}</div>
+        <div class="col-md-4 ml-auto" style="min-width: 220px;">
+          <div class="text-right">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_1" value="1">
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_2" value="2">
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_3" value="3">
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_4" value="4">
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_5" value="5">
+            </div>
+          </div>
+        </div>
+      </div>
+  <hr></hr>
+  {% endfor %}
+  <div class="container text-center">
+    <button class="btn btn-info "type="submit">Finish</button>
+  </div>
+  </form>
+
+  </article>
+{% endblock content %}

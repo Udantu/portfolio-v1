@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+
+<article class="container content-section col-lg-8 shadowed padit">
+  <div class="text-center text-muted"><strong>Architecture</strong></div>
+  <hr></hr>
+  <div class="row">
+
+
+        <div class="container content-section col-sm-4 hvrbox hvrbox_background stdize-hvrbox border-0 shadowed" style="background-image: url(../../static/images/aboutImages/django.jpg);">
+            <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">
+                <p>Powered by Django</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="container content-section col-sm-4 hvrbox hvrbox_background stdize-hvrbox border-0 shadowed" style="background-image: url(../../static/images/aboutImages/react.png);">
+            <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">
+                <p>Designed through React *TO BE IMPLEMENTED*</p>
+              </div>
+            </div>
+        </div>
+
+  </div>
+  <div class="row">
+        <div class="container content-section col-sm-4 hvrbox hvrbox_background stdize-hvrbox border-0 shadowed" style="background-image: url(../../static/images/aboutImages/aws.png);">
+            <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">
+                <p>Hosted on AWS</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="container content-section col-sm-4 hvrbox hvrbox_background stdize-hvrbox border-0 shadowed" style="background-image: url(../../static/images/aboutImages/db.jpg);">
+            <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">
+                <p>Stored in SQL</p>
+              </div>
+            </div>
+        </div>
+
+  </div>
+  <hr></hr>
+
+  <div class="row">
+    <div class="col-4 text-center">
+        <button class="btn btn-light btn-fixed-width-sm" type="button" data-toggle="collapse" data-target="#securityInfo" aria-expanded="false" aria-controls="collapseExample">
+          Security
+        </button>
+    </div>
+
+    <div class="col-4 text-center">
+        <button class="btn btn-light btn-fixed-width-sm" type="button" data-toggle="collapse" data-target="#appsInfo" aria-expanded="false" aria-controls="collapseExample">
+          Apps
+        </button>
+    </div>
+
+    <div class="col-4 text-center">
+        <button class="btn btn-light btn-fixed-width-sm" type="button" data-toggle="collapse" data-target="#modelsInfo" aria-expanded="false" aria-controls="collapseExample">
+          Models
+        </button>
+    </div>
+  </div>
+
+  <!-- <article class="container content-section col-md-8 hvrbox">
+    <div class="container search-bar">
+      <form method="get">
+        <input type="text" class="form-control" name="q" id="id_q" placeholder="Search...">
+      </form>
+    </div>
+  </article> -->
+
+</article>
+
+<div class="collapse container p-0 mb-4" id="securityInfo">
+  <div class="card card-body text-muted container col-lg-8 mx-auto">
+    <p>Security Button</p>
+    <li>One</li>
+    <li>Two</li>
+  </div>
+</div>
+
+<div class="collapse container" id="securityInfo2">
+  <div class="card card-body text-muted container col-lg-8 mx-auto">
+    <p>Security Button</p>
+    <li>One</li>
+    <li>Two</li>
+  </div>
+</div>
+
+<div class="collapse" id="appsInfo">
+  <div class="card card-body text-muted container col-lg-8 mx-auto">
+    <p>Apps</p>
+    <li>One</li>
+    <li>Two</li>
+  </div>
+</div>
+
+<div class="collapse" id="modelsInfo">
+  <div class="card card-body text-muted container col-lg-8 mx-auto">
+    <p>Models</p>
+    <li>One</li>
+    <li>Two</li>
+  </div>
+</div>
+{% endblock %}

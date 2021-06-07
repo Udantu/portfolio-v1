@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if not user.is_authenticated %}
+      <div class="alert alert-info col-lg-8 mx-auto">
+          <a href="{% url 'toRegister' %}">Register</a> or <a href="{% url 'toLogin' %}">Sign In</a> to take the surveys!
+      </div>
+    {% endif %}
+
+    {% for s in surveys %}
+      <div class="container content-section col-lg-8 shadowed">
+        <div class="row">
+          <h3 class="col-md-6">{{ s.title }}</h3>
+        </div>
+        <p>{{ s.description }}</p>
+        {% if user.is_authenticated %}
+        <hr></hr>
+          <div class="text-center">
+            <button type="button" class="btn btn-dark rounded-circle" onclick="window.location.href='{% url 'toTakeSurvey' s.id %}';">&raquo</button>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+{% endblock %}

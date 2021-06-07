@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="container content-section col-lg-8">
+  <h1>{{ object.title }}</h1>
+  <hr></hr>
+  <p>{{ object.description }}</p>
+  <hr></hr>
+
+  {% for t in object.tags_as_list %}
+    <span class="badge badge-pill badge-secondary">{{ t }}</span>
+  {% endfor %}
+  <hr></hr>
+  <div class="text-center">
+    <button type="button" class="btn btn-info" onclick="window.location.href='{{ object.url }}';">Source Code</button>
+  </div>
+</article>
+{% endblock %}

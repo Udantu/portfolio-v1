@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="container content-section col-lg-8 shadowed">
+    <div class="row">
+      <h3 class="col-12 tc mb-3 mt-3">{{ survey.title }}</h3>
+      <!--
+      <div class="text-right col-5 tr">
+        <strong class="mr-2">Disagree &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agree</strong>
+      </div>
+      -->
+      </div>
+      <div class="row">
+        <div class="col text-right align-self-end">
+          <strong style="font-size: 12px;"><i class="arrow left"></i> &nbsp Disagree |</strong>
+          <strong style="font-size: 12px;">Agree &nbsp <i class="arrow right"></i></strong>
+        </div>
+      </div>
+
+<hr class="style2"></hr>
+  <form method="POST">
+  {% csrf_token %}
+  {% for q in questions %}
+  <div class="container">
+      <div class="row">
+        <div class="col-7 p-3 q_width">
+          <div class="surveyQ m-l"><strong>{{ q.qNumber }})</strong> {{ q.question }}</div>
+        </div>
+
+        <div class="col align-self-end">
+          <div class="text-right mr-0">
+            <div class="form-check form-check-inline margit">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_1" value="1">
+            </div>
+            <div class="form-check form-check-inline margit">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_2" value="2">
+            </div>
+            <div class="form-check form-check-inline margit">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_3" value="3">
+            </div>
+            <div class="form-check form-check-inline margit">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_4" value="4">
+            </div>
+            <div class="form-check form-check-inline margit">
+              <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.pk}}_5" value="5">
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <hr></hr>
+  {% endfor %}
+  <div class="container text-center">
+    <button class="btn btn-dark"type="submit">Submit</button>
+  </div>
+  </form>
+  </article>
+{% endblock content %}

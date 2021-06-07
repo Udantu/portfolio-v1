@@ -1,0 +1,447 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<article class="container-fluid content-section col-lg-8 shadowed">
+  <div class="text-center">
+      <img class="rounded-circle responsivePP mt-1" src="{% static 'images/pp2.png' %}" width=300px height=300px>
+      <hr></hr>
+      <strong>Daniel J. Heinsch</strong>
+      <p class="text-muted">Computer Science | Business Analytics</p>
+  </div>
+
+  <hr></hr>
+  <div class="row text-center">
+    <div class="container">
+      <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-light" onclick="window.location.href='../../../static/images/Resume_Heinsch_3_29.pdf';">
+          Resume
+        </button>
+        <button type="button" class="btn btn-light" onclick="window.location.href='https://www.github.com/udantu';">
+          GitHub
+        </button>
+        <button type="button" class="btn btn-light" onclick="window.location.href='https://www.linkedin.com/in/daniel-heinsch-525892160/';">
+          LinkedIn
+        </button>
+        <button type="button" class="btn btn-light">
+          Indeed
+        </button>
+      </div>
+    </div>
+  </div>
+</article>
+
+  <div class="container">
+        <div id="resume" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg rounded-0" width=500px>
+
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title">My Resume</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                        <embed src="../../../static/images/Resume_Heinsch_3_29.pdf"
+                               frameborder="0" width="100%" height="400px">
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<article class="container-fluid content-section col-lg-8 shadowed">
+  <main role="main" class="container">
+    <div class="row mt-2">
+      <div class="col-md-2">
+        <strong>About Me</strong>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <p>
+            My name is Daniel Heinsch, I was born in Watertown, Minnesota and am fulfilling my pursuit
+            of a diploma in Computer Science and Business Analytics at Cornell College in Iowa.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis lectus faucibus luctus consequat.
+            Nulla orci arcu, imperdiet porta dolor vel, tempor consequat nibh. Vestibulum tempor laoreet odio, nec malesuada
+            augue tristique non. Sed aliquam eget sapien sit amet egestas. Phasellus tempor nibh vitae faucibus consequat.
+            Pellentesque tristique mauris et dolor convallis vehicula. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Phasellus id erat eget mauris facilisis sagittis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <hr></hr>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <strong>Education</strong>
+      </div>
+    <div class="col-md-10">
+      <div>
+        <p>
+          I have a double major in Computer Science and Business Analytics with a minor in Applied Statistics.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis lectus faucibus luctus consequat.
+          Nulla orci arcu, imperdiet porta dolor vel, tempor consequat nibh. Vestibulum tempor laoreet odio, nec malesuada
+          augue tristique non. Sed aliquam eget sapien sit amet egestas. Phasellus tempor nibh vitae faucibus consequat.
+          Pellentesque tristique mauris et dolor convallis vehicula. Interdum et malesuada fames ac ante ipsum primis in
+          faucibus. Phasellus id erat eget mauris facilisis sagittis.
+        </p>
+      </div>
+
+      <hr></hr>
+      <div class="row">
+        <div class="col-4 text-center">
+          <button class="btn btn-light btn-sm btn-small-text" type="button" data-toggle="modal" data-target="#CSC">
+            CSC Classes
+          </button>
+        </div>
+        <div class="col-4 text-center">
+          <button class="btn btn-light btn-sm btn-small-text" type="button" data-toggle="modal" data-target="#ECB">
+            ECB Classes
+          </button>
+        </div>
+        <div class="col-4 text-center">
+          <button class="btn btn-light btn-sm btn-small-text" type="button" data-toggle="modal" data-target="#STA">
+            STA Classes
+          </button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="CSC" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg rounded-0" width=500px>
+                  <div class="modal-content rounded-0 modal-responsive">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Computer Science Classes</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table col-md-12 table-borderless">
+                          <thead>
+                            <tr>
+                              <th scope="col">Class ID</th>
+                              <th scope="col">Class</th>
+                              <th scope="col">Concepts</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">CSC 140</th>
+                              <td>Foundations of CS</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Python</span>
+                                <span class="badge badge-pill badge-secondary">Data Types</span>
+                                <span class="badge badge-pill badge-secondary">Functions</span>
+                                <span class="badge badge-pill badge-secondary">Classes & Objects</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 144</th>
+                              <td>Software Architecture</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Java</span>
+                                <span class="badge badge-pill badge-secondary">OOP</span>
+                                <span class="badge badge-pill badge-secondary">Eclipse IDE</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 151</th>
+                              <td>Discrete Mathematics</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Logic</span>
+                                <span class="badge badge-pill badge-secondary">Set Theory</span>
+                                <span class="badge badge-pill badge-secondary">Graph Theory</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 218</th>
+                              <td>Computer Organization</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Bytes</span>
+                                <span class="badge badge-pill badge-secondary">CPU Structure</span>
+                                <span class="badge badge-pill badge-secondary">RAM Structure</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 230</th>
+                              <td>Database technologies</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">SQL</span>
+                                <span class="badge badge-pill badge-secondary">Remote SSH</span>
+                                <span class="badge badge-pill badge-secondary">Table Manipulation</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">STA 223</th>
+                              <td>Intro to Data Science</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">R</span>
+                                <span class="badge badge-pill badge-secondary">Data Cleaning</span>
+                                <span class="badge badge-pill badge-secondary">Table Manipulation</span>
+                                <span class="badge badge-pill badge-secondary">Data Visualization</span>
+                                <span class="badge badge-pill badge-secondary">Data Scraping</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">STA 257</th>
+                              <td>Time Series Analysis</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">R</span>
+                                <span class="badge badge-pill badge-secondary">ARIMA</span>
+                                <span class="badge badge-pill badge-secondary">Linear Regression</span>
+                                <span class="badge badge-pill badge-secondary">Holt Winters</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 301</th>
+                              <td>Algorithms & Data Structures</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Java</span>
+                                <span class="badge badge-pill badge-secondary">Sorting</span>
+                                <span class="badge badge-pill badge-secondary">Lists</span>
+                                <span class="badge badge-pill badge-secondary">Queues</span>
+                                <span class="badge badge-pill badge-secondary">Stacks</span>
+                                <span class="badge badge-pill badge-secondary">Hash Tables</span>
+                                <span class="badge badge-pill badge-secondary">Big O notation</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 311</th>
+                              <td>Systems Software</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">C</span>
+                                <span class="badge badge-pill badge-secondary">Network Sockets</span>
+                                <span class="badge badge-pill badge-secondary">Pointers</span>
+                                <span class="badge badge-pill badge-secondary">Memory Allocation</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 321</th>
+                              <td>Computer Graphics</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Perspective</span>
+                                <span class="badge badge-pill badge-secondary">Unity</span>
+                                <span class="badge badge-pill badge-secondary">Linear Projection</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 356</th>
+                              <td>Machine Learning</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Python</span>
+                                <span class="badge badge-pill badge-secondary">ML Road-map</span>
+                                <span class="badge badge-pill badge-secondary">Regression</span>
+                                <span class="badge badge-pill badge-secondary">Classification</span>
+                                <span class="badge badge-pill badge-secondary">Dimensionality Reduction</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CSC 358</th>
+                              <td>Open Source Development</td>
+                              <td>
+                                <span class="badge badge-pill badge-secondary">Unity</span>
+                                <span class="badge badge-pill badge-secondary">C#</span>
+                                <span class="badge badge-pill badge-secondary">GitHub</span>
+                                <span class="badge badge-pill badge-secondary">Git</span>
+                                <span class="badge badge-pill badge-secondary">Slack</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <div id="ECB" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg rounded-0" width=500px>
+            <div class="modal-content rounded-0">
+              <div class="modal-header">
+                <h4 class="modal-title">Business Analytics Classes</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <table class="table col-md-12">
+                  <thead>
+                    <tr>
+                      <th scope="col">Class ID</th>
+                      <th scope="col">Class</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">ECB 101</th>
+                      <td>Microeconomics</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 102</th>
+                      <td>Macroeconomics</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 121</th>
+                      <td>Data Visualization</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 151</th>
+                      <td>Financial Accounting</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">STA 201</th>
+                      <td>Statistical Methods I</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">STA 202</th>
+                      <td>Statistical Method II</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 212</th>
+                      <td>Social Networks</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">CSC 230</th>
+                      <td>Database Technologies</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 326</th>
+                      <td>Managerial Economics</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 353</th>
+                      <td>Business Analytics I</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 354</th>
+                      <td>Business Analytics II</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 358</th>
+                      <td>Analytics Case Seminar</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div
+      <!-- Applied Statistics modal content -->
+      <div class="container">
+        <div id="STA" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg rounded-0" width=500px>
+            <!-- Modal content-->
+            <div class="modal-content rounded-0">
+              <div class="modal-header">
+                <h4 class="modal-title">Applied Statistics Classes</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <table class="table col-md-12">
+                  <thead>
+                    <tr>
+                      <th scope="col">Class ID</th>
+                      <th scope="col">Class</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">STA 201</th>
+                      <td>Statistical Methods I</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">STA 202</th>
+                      <td>Statistical Methods I</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">STA 223</th>
+                      <td>Intro to Data Science</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">STA 257</th>
+                      <td>Time Series Analysis</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ECB 353</th>
+                      <td>Business Analytics I</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+  <hr></hr>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <strong>Skills</strong>
+      </div>
+    <div class="col-md-10">
+      <div>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis lectus faucibus luctus consequat.
+        Nulla orci arcu, imperdiet porta dolor vel, tempor consequat nibh. Vestibulum tempor laoreet odio, nec malesuada
+        augue tristique non. Sed aliquam eget sapien sit amet egestas. Phasellus tempor nibh vitae faucibus consequat.
+        Pellentesque tristique mauris et dolor convallis vehicula. Interdum et malesuada fames ac ante ipsum primis in
+        faucibus. Phasellus id erat eget mauris facilisis sagittis.
+        </p>
+        <hr></hr>
+        <p>Some Experience</p>
+        <span class="badge badge-pill badge-secondary">Java</span>
+        <span class="badge badge-pill badge-secondary">C</span>
+        <span class="badge badge-pill badge-secondary">C#</span>
+        <span class="badge badge-pill badge-secondary">Unity</span>
+        <span class="badge badge-pill badge-secondary">Machine Learning</span>
+        <span class="badge badge-pill badge-secondary">Version Control (git)</span>
+        <span class="badge badge-pill badge-secondary">Tensor Flow</span>
+        <span class="badge badge-pill badge-secondary">Systems Software</span>
+        <span class="badge badge-pill badge-secondary">SQL & Databases</span>
+        <span class="badge badge-pill badge-secondary">Linux</span>
+        <span class="badge badge-pill badge-secondary">JS</span>
+        <hr></hr>
+        <p>Experienced</p>
+        <span class="badge badge-pill badge-secondary">R</span>
+        <span class="badge badge-pill badge-secondary">Python</span>
+        <span class="badge badge-pill badge-secondary">Backend Django Development</span>
+        <span class="badge badge-pill badge-secondary">HTML</span>
+        <span class="badge badge-pill badge-secondary">CSS </span>
+        <span class="badge badge-pill badge-secondary">Data Structures</span>
+        <span class="badge badge-pill badge-secondary">Algorithms</span>
+        <span class="badge badge-pill badge-secondary">AWS</span>
+        <span class="badge badge-pill badge-secondary">Object Oriented Programming</span>
+      </div>
+
+
+
+    </div>
+    </div>
+  </main>
+  <hr></hr>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <strong>Hobbies</strong>
+      </div>
+    <div class="col-md-10">
+      <div>
+        <p>
+          In my free time, I am usually found hanging out with my friends, watching youtube videos or movies, reading, and most of all,
+          coding. I really enjoy photography and music production, where I can let my artistic side out.
+        </p>
+      </div>
+    </div>
+    </div>
+  </main>
+</article>
+{% endblock %}
